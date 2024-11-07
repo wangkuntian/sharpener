@@ -50,29 +50,43 @@ Commands:
 编包工具默认的配置文件是/etc/sharpener/sharpener.conf
 ```bash
 [DEFAULT]
+# rpm保存路径
 save_path = '/opt/sharpener'
 
 [rpm]
+# 是否启用缓存
 cached = True
+# rpm的来源
 source = 'centos'
+# OpenStack版本
 openstack_version = 'victoria'
 
 [koji]
+# koji的IP地址
 host = '10.30.38.131'
+# koji的用户
 user = 'openstack-a'
+# koji的密码
 password = 'uos.com'
+# 编包的Tag
 tag = 'kongzi-openstack-victoria'
+# 编包继承的Tag
 parent_tag = 'kongzi'
+#
 tags = kongzi-openstack-victoria,fuyu-openstack-victoria
+# 是否是测试提交
 test_build = True
 
 
 [gerrit]
+# gerrit的IP
 host = '10.30.38.104'
+# gerrit的端口
 port = 29418
-admin = ut002944
 
+# gerrit用户
 user = wangkuntian
+# gerrit的邮箱
 email = wangkuntian@uniontech.com
 
 ```
